@@ -13,4 +13,34 @@
     <version>1.0</version>
     <name>TestProxy1</name>
     <packaging>pom</packaging>
+
+          <build>
+        <plugins>
+          
+          <plugin>
+             <groupId>io.apigee.build-tools.enterprise4g</groupId>
+             <artifactId>apigee-edge-maven-plugin</artifactId>
+              <version>1.1.5</version>
+              <executions>
+                <execution>
+                  <id>configure-bundle-step</id>
+                  <phase>package</phase>
+                  <goals>
+                    <goal>configure</goal>
+                  </goals>
+                </execution>
+                <execution>
+                    <id>install-bundle-step</id>
+                    <phase>install</phase>
+                    <goals>
+                      <goal>deploy</goal>
+                    </goals>
+                </execution>
+              </executions>
+            <configuration>
+                    <skip>false</skip>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
 </project>
