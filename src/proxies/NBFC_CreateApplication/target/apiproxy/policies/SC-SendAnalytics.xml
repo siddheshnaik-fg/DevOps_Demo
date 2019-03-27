@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<StatisticsCollector async="false" continueOnError="true" enabled="true" name="SC-SendAnalytics">
+    <DisplayName>SC-SendAnalytics</DisplayName>
+    <Statistics>
+        <Statistic name="LOS_RESPONSE_CODE" type="string" ref="los_status_code">NoResponseCode</Statistic>
+        <Statistic name="CHFL_Typeofloan" type="string" ref="RequestTypeOfLoan">NoReqTypeOfLoan</Statistic>
+        <Statistic name="LOS_APPLICATIONID" type="string" ref="respApplicationId">NoApplicationId</Statistic>
+    </Statistics>
+</StatisticsCollector>

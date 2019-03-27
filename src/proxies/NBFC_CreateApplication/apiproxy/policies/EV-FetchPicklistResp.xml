@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables name="EV-FetchPicklistResp">
+    <Source>rep_SC-PicklistValidations</Source>
+    <JSONPayload>
+        <Variable name="PicklistResult">
+            <JSONPath>$.result</JSONPath>
+        </Variable>
+        <Variable name="PicklistMessage">
+            <JSONPath>$.message</JSONPath>
+        </Variable>
+    </JSONPayload>
+</ExtractVariables>

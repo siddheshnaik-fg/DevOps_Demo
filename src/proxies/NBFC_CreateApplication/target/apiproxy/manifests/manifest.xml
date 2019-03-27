@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AE-ReadDevAppProfile" version="SHA-512:cbdd01ad233d79062794c0ead6598f56cc98a4defa862b496e5fe82ea73569929368f74ae0ad5bb6e02fffe1021c627341e7ae5cafd98962e02cb1e927bad308"/>
+        <VersionInfo resourceName="AM-AddCORS" version="SHA-512:565b18d844642fcc064e48608aa67f38bb1d3d7446d15c532167b72c92982361b39a6cd5b13cffe911ac7d0a0b587897642691d01672158b4148bf5be74cdea5"/>
+        <VersionInfo resourceName="AM-CreateOAuthRequest" version="SHA-512:260a08644977a57b68f64cf52f055ffd4e1b3b81dbdc58f87b0c86f49dace41a6ac208e5a8d56c57f7616dceaac59ae3687cac587ae6bf3f6ec34b0f643a817c"/>
+        <VersionInfo resourceName="AS-SetRequest" version="SHA-512:f5437d9774bb901399ab887f2a65b21da482d445ea4b266d596e927a7be9932ef1ad18c711b5ca818dc9b4589883eb501548db1c032f598f7c8e8c19cbcc796e"/>
+        <VersionInfo resourceName="EV-ExtractAllowedIPList" version="SHA-512:ce3a45588ae1d9ef6ffc07c61bfe071f7400e0d5a5ecfa5353bb3e113eb0472acb924290067523a6c758ed0140978dcb41fbacaf1b7e32d3044b5f09cbbad0f3"/>
+        <VersionInfo resourceName="EV-FetchPicklistResp" version="SHA-512:7f2bcd5b5f5dade299971361279994e76c1de2f1bebc767c3f6c69e514a71d1a927938b1ec7c7e7b65151dfdc40eaa1cee4842ec485c815c98120b11d2866462"/>
+        <VersionInfo resourceName="FC-GenerateSalesforceToken" version="SHA-512:0b46417cacf4b262187cde9c61dc4ff94ce508ecdf6bc841443d7c63b5fbc113cfaf87e18726f400b8c568e37a04cee34be3c4cb11a834eaa532995c596ae204"/>
+        <VersionInfo resourceName="JS-BackendFieldMapping" version="SHA-512:fe4bebc82916957d91d349b60b2e1c43746f71cdaadaa138d7eacc498f1e757ccf4c39d3e56342d5c807413c4de724eee0729853e2b8771974c5d8dc3dcf7e85"/>
+        <VersionInfo resourceName="JS-IPValidation" version="SHA-512:8ccfda96ce2fd33ded162eed9a4819c3b620623e3bacd799e434de356893844e9ed16b71a1c6ea5ab4e7d0a265894913011bc737319747c0c5eaf3f2941f8e3d"/>
+        <VersionInfo resourceName="JS-RaiseFault" version="SHA-512:fa3f01d4f1af1d0d7e3259337b4cbf4a64dee232c1fcd024aa315e76b5b7b03366d5966bc2ee569ed2be446d6d755cb49b3f12dfb581fbdc806ba5ae1851c59e"/>
+        <VersionInfo resourceName="JS-RequestValidations" version="SHA-512:f560df08996f0dbe6b851c2259349f22de34ef6f3f4db7feb776dad2801be01c6858241b36c6b1074b27452e97c11327966a81b1a1cf7d4ca6bc0f5dfc36f4e3"/>
+        <VersionInfo resourceName="JS-SetHealthResponse" version="SHA-512:01fe566db750476da13e6b16b035440bc7fb3239ada73871f6263f16d08186f680f23e3b5ce4f958441655eedb01d23df19bc6490180e1477fa97a18e01b93be"/>
+        <VersionInfo resourceName="JS-SetResponse" version="SHA-512:ee26cbdf09841eda5ffb4db19fedc188aca33b6b9d647aa52a05f5b4a77bcd17251705dbec283286b34b8dcb4bc4381c861728e09556fc26b8439026cc0d602e"/>
+        <VersionInfo resourceName="JS-SetUIDReference" version="SHA-512:9abef8e52afb3306f36956d39ca23b2e388f13ede8d4aadea6c5fd65d748769655b93c6d7c28ea508bf46d9038a0653f559521cd261872ab48a644b61fb6bf14"/>
+        <VersionInfo resourceName="JS-StateCityNameValidation" version="SHA-512:60c29cfde18f4838c8d4147abe1a23c8fafd88879c8ab35a9ee663f6840a3523c6415916849ffd3f519f8ef9a8bb2979ecbdd6ce0235fd4ec6ba517df2e3a08e"/>
+        <VersionInfo resourceName="JS-ValidateAadhar" version="SHA-512:1c12cd64a74396a34cce726587187b50c38eb307885ad4e0606e82a55d253720e4a789c7040fcd31469923fe32b5a74b7241dcab291a576675a23527cdc7cb4b"/>
+        <VersionInfo resourceName="JTP-ValidateReqBody" version="SHA-512:6a5f62df628d3607d53dd3158658f4f0199e6a6b49f1a0c9adc1541c8807200f00fca84319f82d2e760abe4e36d2d0903df99906c336eaf187479e72e373be14"/>
+        <VersionInfo resourceName="KVM-GET_APIKEYInternal" version="SHA-512:c70812586cbd840ed7ffb3564e174311f019fc3bc6162acbad21a481d6f2f3e2aa1fa072a533705628736c1ae90bd930f4a6f0005e38a0d73140f007289faada"/>
+        <VersionInfo resourceName="KVM-GetOAuthCredentials" version="SHA-512:1fd5c17535feaa42e091e187c93acb765855e376866395ce28ac9ccb0e1496c289daea5d6833eb84868c493c4c759b73adb6e9efd084792ddc4c55357118e492"/>
+        <VersionInfo resourceName="OA-VerifyAccessToken" version="SHA-512:b936e747e0fcc14fdba2b8a1a3b2dc86b3cab0de21f9962687e051a5f1a99b86b223f6ec4945b11beeedcee1bb5359ee1ebb46cde435a99e8853aade1c5b68b7"/>
+        <VersionInfo resourceName="QP-SetQuota" version="SHA-512:cb47ad9f3683546f869b73be1e0e1974507084f7d4e714a423dc3dd4f57baeb015b65670a1c496f90dad733d4fddca25a9d208caf4965d852db34ce02e52247e"/>
+        <VersionInfo resourceName="REP-ValidateRequestExpresion" version="SHA-512:81c23c12ffef6c1e8b45215979be6930e6a22f417f249ea137835b78e4679e01ef3fd30cb177bd2131d5c9cb85481d6217ad9097f13563a53703e28165c80012"/>
+        <VersionInfo resourceName="RF-BadRequest" version="SHA-512:68704c4fa5569f6bd8d6ead248cf4a29f963c6bc3a2e8da5ae0744506eeb66a25699a7c0bd6b7464d1fae8a3ca278e5aa256985b68be4b19593d2a6f7199b61a"/>
+        <VersionInfo resourceName="RF-BadRequest-statecityname" version="SHA-512:6c0e9c7ef8d36ca108a1637790ef45e297b0326e0807d94439523fcdddb3a952de0d811f794b9bd61619cf94b5ef36d92fc80782c98dc67d889d70c525bb7991"/>
+        <VersionInfo resourceName="RF-InternalError" version="SHA-512:8df6a14276a8db8ae205e32688b324263d735382cc74d7755f8251b071ecf5296b0fb4b2faf310b29d7b0cd86fd20066faa57ba63ba114017f16024dd4cc24ff"/>
+        <VersionInfo resourceName="RF-InvalidAadhar" version="SHA-512:592052b4c0ca0fa9e9bbebcb200c7d934cbcdd718254864712fef50a703935ea126ca4eca62e1d6b4de8e3335ddd33fb244b7a60755a20064a55b243d7e5031a"/>
+        <VersionInfo resourceName="RF-InvalidHttpVerb" version="SHA-512:ce0099a8ca30062d04434b1f172e453f4c419328264bb2f92947f8f35a67617fa5eebc785153f2275e50af119bfbb7352de9df2aaa1ebb8eb7190627fe35d047"/>
+        <VersionInfo resourceName="RF-InvalidResource" version="SHA-512:5369f096629e2fe8d6303975c7b970faaf555c95847e074701dc7bd368376ece9bfe9d8d29661cc62e8d11032e64c12453d5aa412aa696ca03d095bdd3841bb5"/>
+        <VersionInfo resourceName="RF-PicklistValueError" version="SHA-512:bd1da563ae7eee7123e2ff104c061fe05851bc5f666519d37f4b4424f79722a29543c80861c42c1dbaec14c2cdd0f8b8e75032acd79f9a1bbb083a0d4b285e8b"/>
+        <VersionInfo resourceName="RF-RaiseFault" version="SHA-512:b117f743313522050e5d4e2366c987d08721ff190c17cbed7501263ad1f1b52a44949e1ce11e00116ede677a5337c5c05790ce7e710f9ba9e30f2d4d667039ca"/>
+        <VersionInfo resourceName="RF-Throttle" version="SHA-512:eea9743c29fe2768a70fed1e1d307c7bb0246c3cff86e2010c6dab705725d62a15a35745041695deead6ebe74442bf92f09c8e00c7c8f94b492fdf6bbe92a723"/>
+        <VersionInfo resourceName="RF-TimeOutError" version="SHA-512:9648594977c2e008190f11b4ab49d761dee9853fad59c72c10ca579f51dabec94e5b40c4f53998255260b041f84d2b8affb63718984ce04a10739ddd7d3ad215"/>
+        <VersionInfo resourceName="RF-Unauthorized" version="SHA-512:d3f00246675635ec4de8ab1748bba01320254ed6558569a3247b9c95dab49720bd9f29902cad0df179ccb879df386f241bf43834e5bd66b8b11596f8f82a29d3"/>
+        <VersionInfo resourceName="RS-FieldValidationError" version="SHA-512:66eeed110bd78b912b42588b4ca6c779e5644b7ff09e9ca39c323e49d9b3c91e2c54710360d3b7cd83f077a19a26633d9d4eb053f69219e2ea4184d0b8d18956"/>
+        <VersionInfo resourceName="RS-InvalidIP" version="SHA-512:e2ac238a4da5f728f7d011ab2ac3a8b1ee56ff6dd0a25b63796b25e450d731b84cf729fecb5980611390beb8cd241da20108710c1d8adbd5e4fc73a2c48f8210"/>
+        <VersionInfo resourceName="RS-InvalidRequest" version="SHA-512:f3d647e45c52d62ae26778327ce6f27152e47b78ba9f19ea1e31679c29239d21eca7ca1269b12bceb642826f22600e7993be75f9cdf037e3518936aaae3dc438"/>
+        <VersionInfo resourceName="SA-RateLimiting" version="SHA-512:cf8b137c5021029c7d93c331bf716252b3a4eb8479cb4c39293175b2d5e36c0591951a651b6a2056cc04523575dba2d1e548a3f10a6ac93ab8acbea0e0450cc8"/>
+        <VersionInfo resourceName="SC-GetAccessToken_Dev2" version="SHA-512:4bb9447f606370e899217a837fa3a5d244d72a234b0b80a1454d6a30d4a0d1da3259e23f0b1758ca0392dd2156049570c24854bd156e65807455cc3ff2b6103b"/>
+        <VersionInfo resourceName="SC-PicklistValidations" version="SHA-512:bcde015d9e3d6c78dd9792cec419bf4338c82e8cc80dddc4742e030ce477bb04450516a6a4771e5b5312adbdb3d658cadbcb9f79153286294872fb0f1d689e2c"/>
+        <VersionInfo resourceName="SC-SendAnalytics" version="SHA-512:d0e5e5d1e7e4ebbd0d3649a7b939149c13ddae9a26c945bb49c6b1b56846cade3529e32abb797b14c42df99a08761904dc59fb92053c675ddacd024d8127e447"/>
+        <VersionInfo resourceName="SC-UIDReference" version="SHA-512:4c57a4e0ecfd421f429d5d611d16623c4b0f92c31aa390aa315a797600cd6c67a57360c724592f98c033f81a9d298005f8ba26425004fbda643faaebfd7f92fb"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:722cf60c6006c6eea7724decf75189b93f4d49c08634b9d5dee162d376f0afbb58237d90b61ae44d3d579baa34c08d917bd8659f02cf0379721b7508bcca0f52"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://JS-BackendFieldMapping.js" version="SHA-512:dca66fd91aa6a2babe8814f30f92330b5114ed39d6e3fb6cce63bb82b778231cf1d2c6ebd6333ef29d346b16a9a2ad113a69d535fedf21ee98f814546ddf052c"/>
+        <VersionInfo resourceName="jsc://JS-IPValidation.js" version="SHA-512:ffbfd8da7fa7b1d964bc16c22f0f33006c4c05cf8cba3230b40a81bfc21ad9b0e20b5089293c4ce6adba5ae4e9cd18bbc14bcba614e4663196666bb22f21428d"/>
+        <VersionInfo resourceName="jsc://JS-RaiseFault.js" version="SHA-512:c30548f4ce8750ddc3aaff90c8897b5d9d062582a4e25414f06372020ed2924b88b470d15c8446526a71fbc84b112260d6703901925651803a8e664ca2e54128"/>
+        <VersionInfo resourceName="jsc://JS-RequestValidations.js" version="SHA-512:45e5797b614159588310f2faf328b18e5c6e701b1663d35f1cf0a75163bca8e94070d169c690b51155601908e7dc6a7a9d062412b7b2a6710fc7d92d1cf3a613"/>
+        <VersionInfo resourceName="jsc://JS-SetHealthResponse.js" version="SHA-512:d0516ee3b4da80456bd540262f3f2e3ba59aecb60b023f40083ea47e4cb02cdfeaea2578d022b8cc6d1033d2f0b34dbc4579bdb7c8c854aac2bb2fc4025d2f4c"/>
+        <VersionInfo resourceName="jsc://JS-SetResponse.js" version="SHA-512:c52efbf9eb469bfb7990d8f44c5857385f120781120a7e58fcd31da2b7a2d3d32bc446183e3c838574fe5aaea14b8440b5d0dd511272cf61bff64d59c4fc7dd4"/>
+        <VersionInfo resourceName="jsc://JS-SetUIDReference.js" version="SHA-512:c4662ceaf3da899775c3d5b435329c786172bea46257cfdda75f290d5df6f80d1489f7d55a0166c787669bb13e3dc6feaddff317b5ff91585cd16fac297313d0"/>
+        <VersionInfo resourceName="jsc://JS-StateCityNameValidation.js" version="SHA-512:b2086bec6d68a24c9972f1411503074c5d65a8e9fb6aacbd5fd477c479d75176a29d987359816202c30f4e974177ff91ef0847380fb0ad2d3127983f771d80e2"/>
+        <VersionInfo resourceName="jsc://JS-ValidateAadhar.js" version="SHA-512:8696a4cdd182b775c8d2f97d6332f42403e93096a36781a5733c212b94ddcc5db44d636db0218f7ebd9546bb62749f14f9ddcc9b4249e610417c237a69046046"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:d004c1c436b7bdfec350a28c86d0b036015b20197835c2919809aa62e8a6f64d269bf299d33e9887c1520bd2b95be8d29205f9d242a29bbf76f936f6ce183e50"/>
+    </TargetEndpoints>
+</Manifest>

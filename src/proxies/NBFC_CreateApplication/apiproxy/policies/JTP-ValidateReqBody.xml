@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JSONThreatProtection async="false" continueOnError="false" enabled="true" name="JTP-ValidateReqBody">
+    <DisplayName>JTP-ValidateReqBody</DisplayName>
+    <ObjectEntryCount>130</ObjectEntryCount>
+    <ArrayElementCount>130</ArrayElementCount>
+    <ContainerDepth>4</ContainerDepth>
+    <Source>request</Source>
+</JSONThreatProtection>

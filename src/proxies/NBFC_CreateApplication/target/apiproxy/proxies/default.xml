@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <DefaultFaultRule name="PlatformFaults">
+        <AlwaysEnforce>false</AlwaysEnforce>
+        <Step>
+            <Name>AM-AddCORS</Name>
+        </Step>
+        <Step>
+            <Name>RF-Throttle</Name>
+            <Condition>fault.name = "SpikeArrestViolation"</Condition>
+        </Step>
+        <Step>
+            <Name>RF-Unauthorized</Name>
+            <Condition>fault.name = "InvalidApiKey" or fault.name = "InvalidAPICallAsNoApiProductMatchFound" or fault.name = "invalid_access_token" or fault.name = "access_token_expired"or fault.name = "InvalidAccessToken" or fault.name = "InvalidApiKeyForGivenResource" or fault.name = "FailedToResolveAPIKey"</Condition>
+        </Step>
+        <Step>
+            <Name>RF-BadRequest</Name>
+            <Condition>fault.name = "ThreatDetected" or jsonattack.failed ="true" or regularexpressionprotection.failed = "true"</Condition>
+        </Step>
+        <Step>
+            <Name>JS-RaiseFault</Name>
+        </Step>
+    </DefaultFaultRule>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>SA-RateLimiting</Name>
+            </Step>
+            <Step>
+                <Condition>(request.verb != "POST") and (request.verb != "OPTIONS")</Condition>
+                <Name>RF-InvalidHttpVerb</Name>
+            </Step>
+            <Step>
+                <Name>JTP-ValidateReqBody</Name>
+            </Step>
+            <Step>
+                <Name>REP-ValidateRequestExpresion</Name>
+            </Step>
+            <Step>
+                <Name>SC-SendAnalytics</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>AM-AddCORS</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="OptionsPreFlight-CORS">
+            <Condition>(request.verb = "OPTIONS") or ((proxy.pathsuffix MatchesPath "/userData") and (request.verb = "OPTIONS"))</Condition>
+            <Request>
+                <Step>
+                    <Name>KVM-GetOAuthCredentials</Name>
+                </Step>
+                <Step>
+                    <Name>AM-CreateOAuthRequest</Name>
+                </Step>
+                <Step>
+                    <Name>SC-GetAccessToken_Dev2</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>JS-SetHealthResponse</Name>
+                </Step>
+            </Response>
+        </Flow>
+        <Flow name="Primary Application">
+            <Description>Primary Application</Description>
+            <Request>
+                <Step>
+                    <Name>OA-VerifyAccessToken</Name>
+                </Step>
+                <Step>
+                    <Name>AE-ReadDevAppProfile</Name>
+                </Step>
+                <Step>
+                    <Name>EV-ExtractAllowedIPList</Name>
+                </Step>
+                <Step>
+                    <Name>JS-IPValidation</Name>
+                </Step>
+                <Step>
+                    <Condition>invalidIP==true</Condition>
+                    <Name>RS-InvalidIP</Name>
+                </Step>
+                <Step>
+                    <Name>QP-SetQuota</Name>
+                </Step>
+                <Step>
+                    <Name>JS-RequestValidations</Name>
+                </Step>
+                <Step>
+                    <Condition>missingflag==true</Condition>
+                    <Name>RS-InvalidRequest</Name>
+                </Step>
+                <Step>
+                    <Condition>fieldValidationErr==true</Condition>
+                    <Name>RS-FieldValidationError</Name>
+                </Step>
+                <Step>
+                    <Name>JS-BackendFieldMapping</Name>
+                </Step>
+                <Step>
+                    <Name>KVM-GET_APIKEYInternal</Name>
+                </Step>
+                <Step>
+                    <Name>SC-PicklistValidations</Name>
+                </Step>
+                <Step>
+                    <Name>EV-FetchPicklistResp</Name>
+                </Step>
+                <Step>
+                    <Condition>PicklistResult = "fail"</Condition>
+                    <Name>RF-PicklistValueError</Name>
+                </Step>
+                <Step>
+                    <Name>JS-ValidateAadhar</Name>
+                </Step>
+                <Step>
+                    <Condition>isAadhaarValid==false</Condition>
+                    <Name>RF-InvalidAadhar</Name>
+                </Step>
+                <Step>
+                    <Condition>StateCityListLength&gt;0</Condition>
+                    <Name>JS-StateCityNameValidation</Name>
+                </Step>
+                <Step>
+                    <Condition>invalidStateCityname==true</Condition>
+                    <Name>RF-BadRequest-statecityname</Name>
+                </Step>
+                <Step>
+                    <Condition>AadharNumberflag==true</Condition>
+                    <Name>SC-UIDReference</Name>
+                </Step>
+                <Step>
+                    <Condition>AadharNumberflag==true</Condition>
+                    <Name>JS-SetUIDReference</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>JS-SetResponse</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/userData") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="DefaultNotFound">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>RF-InvalidResource</Name>
+                </Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/nbfc/v1/primaryApplication</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="NoRoute">
+        <Condition>request.verb = "OPTIONS"</Condition>
+    </RouteRule>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

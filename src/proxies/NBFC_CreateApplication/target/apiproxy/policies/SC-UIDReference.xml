@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-UIDReference">
+    <DisplayName>SC-UIDReference</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="req_SC-UIDReference">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Headers>
+                <Header name="Content-Type">application/json</Header>
+                <Header name="APIKey">{private.APIKEYInternal}</Header>
+            </Headers>
+            <Path>/nbfc/v1/mw/internal/uid/reference</Path>
+            <Verb>POST</Verb>
+            <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">{"aadhaarNumber":"%AadharNumber#"}</Payload>
+        </Set>
+    </Request>
+    <Response>rep_SC-UIDReference</Response>
+    <LocalTargetConnection>
+        <APIProxy>NBFC_MW_Integration</APIProxy>
+        <ProxyEndpoint>Internal</ProxyEndpoint>
+    </LocalTargetConnection>
+</ServiceCallout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="TestProxy2">
+    <Basepaths>/testproxy2</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1553676652915</CreatedAt>
+    <CreatedBy>siddhesh.naik@freshgravity.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>TestProxy2</DisplayName>
+    <LastModifiedAt>1553676815778</LastModifiedAt>
+    <LastModifiedBy>siddhesh.naik@freshgravity.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:ae6673f45f1f3dad6231acddb2c3205e7f06052a53df429e69945c3e4bb11f5d688405530e4bf9c8ac8446b2850c87f1048a42c751de1415de87a049322c43cb</ManifestVersion>
+    <Policies>
+        <Policy>Set-Response</Policy>
+        <Policy>remove-query-param-apikey</Policy>
+        <Policy>verify-api-key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

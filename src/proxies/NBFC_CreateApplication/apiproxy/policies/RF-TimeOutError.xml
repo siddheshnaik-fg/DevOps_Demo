@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF-TimeOutError">
+    <DisplayName>RF-TimeOutError</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Payload contentType="application/json">{"errorCode":"504","errorType":"Gateway Timeout","errorMessage":"Gateway Timeout or Connection Timeout"}</Payload>
+            <StatusCode>504</StatusCode>
+            <ReasonPhrase>Gateway Timeout</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

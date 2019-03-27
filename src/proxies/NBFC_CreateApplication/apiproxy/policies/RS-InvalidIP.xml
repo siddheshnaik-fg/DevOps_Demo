@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RS-InvalidIP">
+    <DisplayName>RS-InvalidIP</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json" variablePrefix="%" variableSuffix="#">{
+                "errorCode": "403",
+                "errorType": "Forbidden",
+                "errorMessage": "Forbidden"
+            }</Payload>
+            <StatusCode>403</StatusCode>
+            <ReasonPhrase>Bad Request</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

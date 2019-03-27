@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="true" enabled="true" name="KVM-GET_APIKEYInternal" mapIdentifier="NBFC_PROXY_CHAINING_CONFIG">
+    <DisplayName>KVM-GET_APIKEYInternal</DisplayName>
+    <Properties/>
+    <Get assignTo="private.APIKEYInternal">
+        <Key>
+            <Parameter>APIKEY</Parameter>
+        </Key>
+    </Get>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>
