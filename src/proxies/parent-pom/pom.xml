@@ -29,54 +29,118 @@
     <build>
         <plugins>
             <plugin>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
-            <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.2</version>
-                <executions>
+                    <version>2.3</version>
+                    <executions>
                     <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <overwrite>true</overwrite>
-                            <encoding>UTF-8</encoding>
-                            <echo message="basedir parent : ${basedir}" />
-                            <outputDirectory>${basedir}/target/apiproxy</outputDirectory>
-                            <resources>
-                                <resource>
-                                    <directory>apiproxy</directory>
-                                </resource>
-                            </resources>
-                        </configuration>
+                    <id>copy-resources-step</id>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>copy-resources</goal>
+                    </goals>
+                    <configuration>
+                    <overwrite>true</overwrite>
+                    <outputDirectory>${basedir}/target/apiproxy</outputDirectory>
+                    <resources>
+                    <resource>
+                    <directory>apiproxy</directory>
+                    </resource>
+                    </resources>
+                    </configuration>
                     </execution>
-                </executions>
+                    </executions>
             </plugin>
             <plugin>
-                <groupId>io.apigee.build-tools.enterprise4g</groupId>
-                <artifactId>apigee-edge-maven-plugin</artifactId>
-                <version>1.1.6</version>
+                  <groupId>io.apigee.build-tools.enterprise4g</groupId>
+                    <artifactId>apigee-edge-maven-plugin</artifactId>
+                            <version>1.1.5</version>
+                <executions>
+                <execution>
+                <id>configure-bundle-step</id>
+                <phase>package</phase>
+                <goals>
+                <goal>configure</goal>
+                </goals>
+                </execution>
+                </executions>
+                <configuration>
+                <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.apigee.edge.config</groupId>
+                <artifactId>apigee-config-maven-plugin</artifactId>
+                <version>1.2.1</version>
                 <executions>
                     <execution>
-                        <id>configure-bundle</id>
-                        <phase>package</phase>
+                        <id>create-config-cache</id>
+                        <phase>install</phase>                        
                         <goals>
-                            <goal>configure</goal>
+                            <goal>caches</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>deploy-bundle</id>
-                        <phase>install</phase>
+                        <id>create-config-targetserver</id>
+                        <phase>install</phase>                        
                         <goals>
-                            <goal>deploy</goal>
+                            <goal>targetservers</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-kvm</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>keyvaluemaps</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-resourcefiles</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>resourcefiles</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-apiproduct</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>apiproducts</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-developer</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>developers</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>create-config-app</id>
+                        <phase>install</phase>                        
+                        <goals>
+                            <goal>apps</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-        </plugins>
+            </plugin>  
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>2.3.2</version>
+    <configuration>
+    <source>1.6</source>
+    <target>1.6</target>
+    </configuration>
+    </plugin>
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.9</version>
+    <configuration>
+    <testFailureIgnore>false</testFailureIgnore>
+    </configuration>
+    </plugin>
+    </plugins>
     </build>
 
     <!-- This is where you add the environment specific properties under various profile names -->
