@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-GenerateSalesforceToken">
-    <DisplayName>FC-GenerateSalesforceToken</DisplayName>
-    <FaultRules/>
-    <Properties/>
-    <SharedFlowBundle>NBFC_Generate_LosToken</SharedFlowBundle>
-</FlowCallout>

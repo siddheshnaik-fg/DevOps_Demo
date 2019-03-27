@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Quota async="false" continueOnError="false" enabled="true" name="QP-SetQuota" type="calendar">
-    <DisplayName>QP-SetQuota</DisplayName>
-    <Properties/>
-    <Allow count="100000" countRef="request.header.allowed_quota"/>
-    <Interval ref="request.header.quota_count">1</Interval>
-    <TimeUnit ref="request.header.quota_timeout">minute</TimeUnit>
-    <StartTime>2018-9-1 12:00:00</StartTime>
-</Quota>
