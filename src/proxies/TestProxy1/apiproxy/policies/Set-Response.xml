@@ -4,7 +4,7 @@
     <Properties/>
     <Set>
         <Payload contentType="application/json">
-            {"message":"TestProxy1 successful.."}
+            {"message":"TestProxy1 successful response"}
         </Payload>
     </Set>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
